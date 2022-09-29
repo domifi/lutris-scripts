@@ -1,0 +1,16 @@
+# https://radicalfishgames.itch.io/crosscode
+name: Crosscode
+game_slug: crosscode
+version: itch.io
+slug: crosscode
+runner: linux
+
+script:
+  game:
+    exe: $GAMEDIR/CrossCode
+  files:
+  - archive: "N/A:Please select the Linux (64bit) archive downloaded from itch.io\n(crosscode-new-linux64.zip)"
+  installer:
+  - extract:
+      file: archive
+      dst: $GAMEDIR
