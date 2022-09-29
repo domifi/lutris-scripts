@@ -1,0 +1,20 @@
+# This script is for the German "Green Pepper" release (identifiable by the "7,99€" logo and the included "Toy Factory"-game). It is *not* intended for the Green Pepper "Gold Edition"
+name: Crazy Machines
+game_slug: crazy-machines
+version: Green Pepper CD (German)
+slug: crazy-machines
+runner: wine
+
+script:
+  game:
+    exe: "$GAMEDIR/drive_c/Program Files (x86)/CrazyMachines/CrazyMachines.exe"
+    prefix: $GAMEDIR
+
+  installer:
+  - insert-disc:
+      requires: Crazy Machines
+  - task:
+      name: wineexec
+      description: Running game installer
+      prefix: $GAMEDIR
+      executable: $DISC/Crazy Machines/setup.msi
