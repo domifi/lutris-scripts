@@ -1,0 +1,16 @@
+# https://draknek.itch.io/cosmic-express
+name: Cosmic Express
+game_slug: cosmic-express
+version: itch.io
+slug: cosmic-express
+runner: linux
+
+script:
+  game:
+    exe: $GAMEDIR/Cosmic Express.x86_64
+  files:
+  - archive: "N/A:Please select the linux game archive downloaded from itch.io (cosmic-express-linux.zip)"
+  installer:
+  - extract:
+      file: archive
+      dst: $GAMEDIR
