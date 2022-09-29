@@ -1,0 +1,16 @@
+# https://draknek.itch.io/cosmic-express
+name: A Good Snowman Is Hard To Build
+game_slug: a-good-snowman-is-hard-to-build
+version: itch.io
+slug: a-good-snowman-is-hard-to-build
+runner: linux
+
+script:
+game:
+  exe: $GAMEDIR/a-good-snowman.sh
+files:
+- archive: "N/A:Please select the linux game archive downloaded from itch.io (snowman-linux.tar.gz)"
+installer:
+- extract:
+    file: archive
+    dst: $GAMEDIR
