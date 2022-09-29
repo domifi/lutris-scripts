@@ -1,0 +1,16 @@
+# https://adriaan.itch.io/hidden-folks
+name: Hidden Folks
+game_slug: hidden-folks
+version: itch.io
+slug: my-game-installer
+runner: linux
+
+script:
+  game:
+    exe: $GAMEDIR/Hidden Folks.x86_64
+  files:
+  - archive: "N/A:Please select the linux installer archive downloaded from itch.io (hidden-folks-linux.zip)"
+  installer:
+  - extract:
+      file: archive
+      dst: $GAMEDIR
