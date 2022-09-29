@@ -1,0 +1,19 @@
+# https://ko-op.itch.io/gnog
+name: GNOG
+year: 2018
+game_slug: gnog
+version: itch.io
+slug: gnog
+runner: wine
+
+script:
+  game:
+    exe: $GAMEDIR/datadir/GNOG.exe
+    prefix: $GAMEDIR/prefix
+    working_dir: $GAMEDIR/datadir
+  files:
+  - archive: "N/A:Please select the windows installer archive downloaded from itch.io\n(gnog-windows.zip)"
+  installer:
+  - extract:
+      file: archive
+      dst: $GAMEDIR/datadir/
