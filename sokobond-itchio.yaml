@@ -1,0 +1,17 @@
+# https://draknek.itch.io/sokobond
+name: Sokobond
+game_slug: sokobond
+version: itch.io
+runner: wine
+
+script:
+  game:
+    exe: $GAMEDIR/sokobond_datadir/Sokobond.exe
+    prefix: $GAMEDIR/prefix
+    working_dir: $GAMEDIR/sokobond_datadir
+  files:
+  - archive: "N/A:Please select the windows installer archive downloaded from itch.io (sokobond-windows.zip)"
+  installer:
+  - extract:
+      file: archive
+      dst: $GAMEDIR/sokobond_datadir/
