@@ -2,7 +2,7 @@
 name: Hidden Folks
 game_slug: hidden-folks
 version: itch.io
-slug: my-game-installer
+slug: hidden-folks
 runner: linux
 
 script:
