@@ -2,6 +2,7 @@
 name: Sokobond
 game_slug: sokobond
 version: itch.io
+slug: sokobond
 runner: wine
 
 script:
