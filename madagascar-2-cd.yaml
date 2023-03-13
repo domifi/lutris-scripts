@@ -1,0 +1,24 @@
+# For this game to work you still need to obtain a No-DVD/fixed EXE. It needs to be named "Mad2.exe" (e.g. GameCopyWorld or GameBurnWorld)
+name: "Madagascar: Escape 2 Africa" 
+game_slug: madagascar-escape-2-africa
+version: CD
+slug: madagascar-escape-2-africa-pc
+runner: wine
+
+script:
+  game:
+    exe: $GAMEDIR/drive_c/Program Files (x86)/Activision/Madagascar - Escape 2 Africa(TM)/Mad2.exe
+    prefix: $GAMEDIR
+  files:
+    - nodvd: "N/AYou need a No-DVD/fixed EXE file for this game to work (google it). Needs to be named \"Mad2.exe\""
+  installer:
+  - insert-disc:
+      requires: setup.exe
+  - task:
+      name: wineexec
+      description: Running game installer
+      prefix: $GAMEDIR
+      executable: $DISC/setup.exe
+  - merge:
+      src: nodvd
+      dst: $GAMEDIR/drive_c/Program Files (x86)/Activision/Madagascar - Escape 2 Africa(TM)/
